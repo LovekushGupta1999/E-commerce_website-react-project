@@ -1,0 +1,31 @@
+
+
+header{width: 100% ;height: 80px; padding: 10px 0px;}
+header .headerSearch{  margin-left:10px; margin-top: 13px; width:  100%;display: flex; height: 40px; border: 1px solid #3bb776; padding: 10px 15px; align-items: center;}
+.header .headerSearch .selectDropwrapper{width:40%; font-size: 5%; font-weight: 500; position: relative; padding-right: 0px;}
+
+.header .headerSearch .selectDropwrapper:after{content: '';width: 1px; height: 30px; background: rgba(0,0,0,0.1); position: absolute; top: 0px; right: 0px;}
+header .headerSearch .Search{width: 70%; padding-left: 30px; position: relative;}
+header .headerSearch .Search input{width: 100%; height: 20px; border: 0px; outline: none !important; }
+
+header .headerSearch .Search .SearchIcon{position: absolute;top: -4;right: -26px; opacity: 0.6;font-size: 25px !important;}
+header .headerSearch .selectDropwrapper  .openSelect .arrow{position: absolute; right: -30px;}
+header .headerSearch .selectDropwrapper .selectDrop .searchfield input{width: 80%; font-size: 13px;}
+
+header .selectCountry .selectDropwrapper{ position: absolute; margin: 15px;
+   width: 160px !important; border: 1px solid rgba(0,0,0,0.2); height: 35px;
+   padding-left:10px ; display: flex; align-items: center; box-shadow : 5px 5px 15px rgba(0,0,0,0.05)
+}
+
+header .selectCountry .selectDropwrapper .openSelect{  color: #279a65;}
+header .selectCountry .selectDropwrapper .selectDrop{
+    left:0px !important; top: 35px; width: 200px;
+}
+header .selectCountry .selectDropwrapper .selectDrop .searchfield input{width: 80%; font-size: 13px;}
+header .headerTabs{padding-left: 0px;}
+header .headerTabs li{position: relative;}
+header .headerTabs li span{cursor: pointer; font-size: 16px; display: flex; align-items: start;justify-content: center; }
+header .headerTabs li span img{
+    margin-right: 4px; width: 18px;
+}
+header .headerTabs li span .badge{width: 16px; height: 16px; font-weight: 400;font-size: 12px; position: absolute;top: -8px;display: flex; align-items: center;justify-content: center;left: 6px;}

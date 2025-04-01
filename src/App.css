@@ -1,0 +1,15 @@
+*{
+    margin:0px ; padding: 0px; box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+    font-family: "Roboto", sans-serif;                                            
+}
+
+.cursor{
+    cursor: pointer;
+}
+.container-fluid{
+    padding: 0px 45px;
+}
