@@ -10,8 +10,16 @@ import Iconcompare from '../../assets/images/icon-compare.svg'
 import IconHeart from '../../assets/images/icon-heart.svg'
 import IconCart from '../../assets/images/icon-cart.svg'
 import IconUser from '../../assets/images/icon-user.svg'
-
+import Button from '@mui/material/Button';
+import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
+import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
+import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
+import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
+import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
+import { ClickAwayListener } from '@mui/material'
+import Nav from './nav/Nav.jsx'
 function Header() {
+    const [opendropdown,setopendropdown]=useState(false)
     const [Categories, setCategories]=useState([
        
         'Milk & Dairy',
@@ -33,7 +41,7 @@ function Header() {
             if(res!=null){
                 // console.log(res.data.data)
                 res.data.data.map((item)=>{
-                    // console.log(item.country)
+                    // console.log(item.country)   
                     countrylist.push(item.country)
 
                 })
@@ -57,6 +65,7 @@ function Header() {
                 <div className='col-sm-5'>
                     <div className='headerSearch d-flex align-item-center'>
                      <Select data={Categories} placeholder= {'All Categories'} icon={false}/>
+                     
                         <div className='Search'> 
                         <input type="text" placeholder='Search for items...' />
                         <SearchIcon className='SearchIcon cursor'/>
@@ -85,18 +94,34 @@ function Header() {
                       <span>
                         <img src={IconCart} alt="" />
                         <span className='badge bg-success rounded-circle'>2</span>
-                        Cart </span>
+                        Cart 
+                      </span>
                     </li>
-                    <li className='list-inline-item'>
-                      <span>
-                        <img src={IconUser} alt="" />
-                        Account </span>
+
+                    <ClickAwayListener onClickAway={()=>setopendropdown(false)}>
+                    
+                    <li className='list-inline-item' >
+                      <span onClick={()=>{setopendropdown(!opendropdown)}}>
+                        <img src={IconUser} />
+                        Account
+                      </span>
+                      <ul className='dropdownmenu'  style={{'display':opendropdown ? 'block' : 'none'}}>
+                        <li><Button><PersonOutlineIcon/>MY ACCOUNT</Button></li>
+                        <li><Button><LocationOnOutlinedIcon/>ORDER TRACKING</Button></li>
+                        <li><Button><FavoriteBorderOutlinedIcon/>MY WISHLIST</Button></li>
+                        <li><Button><SettingsOutlinedIcon/>SETTINGS</Button></li>
+                        <li><Button><LogoutOutlinedIcon/>SIGN OUT</Button></li>
+                      </ul>
+
                     </li>
+                 </ClickAwayListener>
+                    
                    </ul>
                 </div>
             </div>
         </div>
        </header>
+       <Nav/>
         </>
     )
 }
