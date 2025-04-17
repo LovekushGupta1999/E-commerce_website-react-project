@@ -6,6 +6,74 @@
 }
 
 .nav .catab{
-    padding: 8px 22px !important;
-    font-size: 15px !important;
+    padding: 6px 12px !important;
+    font-size: 14px !important;
+}
+.nav nav ul li{
+    list-style: none;
+    position: relative;
+}
+
+.nav nav ul li button{color: #3bb77e !important; padding: 18px 15px !important; }
+.nav nav ul li  button a{color: rgba(0,0,0,0.7) !important; font-size: 14px; text-decoration: none;}
+.nav .part3 .phNO svg{
+    font-size: 30px !important;
+}
+.nav .part3 .phNO{
+    display: flex;
+    align-items: center;
+ 
+    margin-left: auto;
+     
+}
+.nav .part3 .phNO h4{
+    font-size: 22px;
+    line-height: 17px;
+}
+.nav .part3 .phNO p{
+    font-size: 12px;
+    opacity: 0.7;
+}
+.nav .part3 .phNO .info{ 
+    padding: 7px;
+}
+nav .dropdown_menu{
+    position: absolute;
+    height: auto;
+    top: 150%;
+    width: 150px;
+    background: #fff;
+    box-shadow : 0 3px 6px rgb(0 0 0 / 20%);
+    padding: 5px 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease-in-out;
+}
+
+nav .dropdown_menu ul{
+    margin: 0px;
+    padding: 0px;
+}
+.nav nav .dropdown_menu ul li{width: 100% !important; list-style: none; margin: 0 !important ; padding: 0px;margin: 0;}
+.nav nav .dropdown_menu ul li button{color: #3bb77e !important; width: 100% !important; text-align: left !important; justify-content: flex-start !important; text-transform: capitalize !important; font-size: 12px !important; padding: 3px 10px !important; }
+.nav nav .dropdown_menu ul li button a{font-weight: 400 !important; opacity: 0.8; }
+.nav nav .dropdown_menu  ul li button:hover{background: #f1f1f1 !important;}
+.nav nav  ul li:hover .dropdown_menu{
+    top: 100%;
+    opacity: 1;
+    visibility: inherit;
+
+}
+.part2{
+    position: static;
+}
+.mega{
+    position: static;
+}
+
+.megamenu{
+
+    height: 400px !important;
+    width: 800px;
+  
 }

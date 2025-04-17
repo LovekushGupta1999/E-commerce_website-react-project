@@ -4,12 +4,19 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 body{
-    font-family: "Roboto", sans-serif;                                            
+    font-family: "Roboto", sans-serif;  
+    background: rgb(110, 95, 95);                                          
 }
 
 .cursor{
     cursor: pointer;
 }
 .container-fluid{
-    padding: 0px 45px;
+    padding: 0px 25px;
+}
+
+.hd{
+    font-size: 25px;
+    padding: 10px;
+    margin-bottom: 20px;
 }
